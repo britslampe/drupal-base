@@ -12,31 +12,11 @@ tasks:
     #     when: LAGOON_ENVIRONMENT_TYPE=="production"
 
   post-rollout:
-    - run:
-        name: drush updb
-        # This will only run if the database exists.
-        command: |
-          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y updb; fi
-        service: cli
-        shell: bash
-    # - run:
-    #     name: drush cim
-    #     # Enable once config sync has been setup.
-    #     command: drush -y cim
-    #     service: cli
-    #     shell: bash
-    - run:
-        name: drush cr
-        # This will only run if the database exists.
-        command: |
-          if [[ $(drush status --field=Database) == "Connected" ]]; then drush -y cr; fi
-        service: cli
-        shell: bash
 
 environments:
   main:
-    cronjobs:
-      - name: drush hourly cron
-        schedule: "M * * * *"
-        command: drush cron
-        service: cli
+    routes:
+      - nginx:
+        - nginx.main.brittany-route-test-some-long-namespace-name-123.amazeeio.review:
+            tls-acme: 'true'
+            insecure: Redirect
