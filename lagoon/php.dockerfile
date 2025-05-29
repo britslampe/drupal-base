@@ -1,6 +1,6 @@
 ARG CLI_IMAGE
 FROM ${CLI_IMAGE} AS cli
 
-FROM brittanym/pod-metrics-exporter:4.0
+FROM uselagoon/php-8.3-fpm:latest
 
 COPY --from=cli /app /app
