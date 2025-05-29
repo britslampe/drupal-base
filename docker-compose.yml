@@ -1,5 +1,5 @@
 x-lagoon-project:
-  &lagoon-project brittany-route-test-some-long-namespace-name-123
+  &lagoon-project brittany-route-test-some-long-name
 x-volumes:
   &default-volumes
     # Define all volumes you would like to have real-time mounted into the docker containers
