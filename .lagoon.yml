@@ -17,6 +17,9 @@ environments:
   main:
     routes:
       - nginx:
-        - nginx.main.brittany-route-test-some-long-name.amazeeio.review:
-            tls-acme: 'true'
-            insecure: Redirect
+          - "nginx.main.brittany-route-test-some-long-name.amazeeio.review":
+              tls-acme: 'true'
+              insecure: Redirect
+          - "nginx.main.brittany-route-test-some-long-namespace-name-123.amazeeio.review":
+              tls-acme: 'true'
+              insecure: Redirect
