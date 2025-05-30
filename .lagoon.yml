@@ -30,13 +30,6 @@ environments:
   main:
     routes:
       - nginx:
-        - nginx.main.brittany-route-test-some-long-name.amazeeio.review:
-            tls-acme: 'true'
-            insecure: Redirect
-#   9.x:
-#     # routes:
-#     cronjobs:
-#       - name: drush cron
-#         schedule: "*/15 * * * *"
-#         command: drush cron
-#         service: cli
+          - "nginx.main.brittany-drupal-base.test9.amazee.io":
+              tls-acme: 'true'
+              insecure: Redirect
