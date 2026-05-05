@@ -30,6 +30,6 @@ environments:
   main:
     routes:
       - nginx:
-          - "nginx.main.brittany-drupal-base.test9.amazee.io":
+          - "*.brittany-drupal-base.test9.amazee.io":
               tls-acme: 'true'
               insecure: Redirect
