@@ -25,11 +25,3 @@ tasks:
 #         name: drush cr
 #         command: drush -y cr
 #         service: cli
-
-environments:
-  main:
-    routes:
-      - nginx:
-          - "*.brittany-drupal-base.test9.amazee.io":
-              tls-acme: 'true'
-              insecure: Redirect
